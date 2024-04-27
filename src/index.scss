@@ -1,0 +1,89 @@
+:root {
+	--color-light: #f7f7f7;
+	--color-base: #111;
+
+	--color-accent: #d5c3a5;
+	--color-secondary: #a6ad8f;
+
+	--radius: 3rem;
+
+	--gradient: linear-gradient(
+		to right,
+		var(--color-accent),
+		var(--color-secondary)
+	);
+}
+
+*,
+*::before,
+*::after {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+html {
+	font-size: 62.5%;
+	scrollbar-width: none;
+}
+
+html,
+body {
+	height: 100%;
+}
+
+body {
+	font-family: 'Roboto', sans-serif;
+	font-weight: 400;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-family: 'Bitter', serif;
+}
+
+a {
+	text-decoration: none;
+}
+
+ul {
+	list-style-type: none;
+}
+
+button {
+	font: inherit;
+}
+
+.app {
+	height: 100dvh;
+	background-color: var(--color-base);
+	padding: 4rem 4%;
+}
+
+.container {
+	height: 100%;
+	display: grid;
+	grid-template-columns: 2.5fr 7.5fr;
+	gap: 2rem;
+}
+
+.subheading {
+	font-size: 1.2rem;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	color: var(--color-light);
+	border: 1px solid #303033;
+	border-radius: 1rem;
+	padding: 1rem 1.5rem;
+}
+
+.heading-secondary {
+	background: var(--gradient);
+	background-clip: text;
+	color: transparent;
+	font-size: clamp(1.8rem, 3.4vw, 4rem);
+}
