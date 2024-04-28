@@ -1,4 +1,4 @@
-import { Aside, Main } from './components';
+import { Aside, Main, SvgBlob } from './components';
 export default function App() {
 	return (
 		<div className="app">
@@ -6,6 +6,7 @@ export default function App() {
 				<Aside />
 				<Main />
 			</div>
+			<SvgBlob />
 		</div>
 	);
 }

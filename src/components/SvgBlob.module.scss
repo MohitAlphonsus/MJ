@@ -1,0 +1,53 @@
+.blob1 {
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: 40rem;
+	height: 40rem;
+	filter: blur(10rem);
+	animation: moveAroundOne 30s alternate-reverse infinite;
+}
+
+.blob2 {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 40rem;
+	height: 40rem;
+	filter: blur(8rem);
+	animation: moveAroundTwo 10s alternate-reverse infinite;
+}
+
+@keyframes moveAroundTwo {
+	from {
+		top: 0;
+		left: 0;
+	}
+	to {
+		top: 0;
+		left: 10rem;
+	}
+}
+
+@keyframes moveAroundOne {
+	0% {
+		top: 0;
+		right: 0;
+	}
+	25% {
+		top: 0;
+		right: 10rem;
+	}
+	50% {
+		top: 10rem;
+		right: 9rem;
+	}
+	75% {
+		top: 10rem;
+		right: 0;
+	}
+	100% {
+		top: 0;
+		right: 0;
+	}
+}

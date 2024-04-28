@@ -5,7 +5,7 @@ import { projects } from '../constants/projects';
 
 function Projects() {
 	return (
-		<div className={styles.projects}>
+		<section className={styles.projects}>
 			<span className="subheading">⭐ My Projects</span>
 			<h2 className="heading-secondary ">Check out my works</h2>
 			<div className={styles.projects__container}>
@@ -34,7 +34,7 @@ function Projects() {
 					</div>
 				))}
 			</div>
-		</div>
+		</section>
 	);
 }
 

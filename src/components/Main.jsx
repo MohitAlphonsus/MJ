@@ -1,12 +1,15 @@
-import { Home, Projects } from '../components';
+import { Home, Projects, About, Footer } from '../components';
 import styles from './Main.module.scss';
 
 function Main() {
 	return (
-		<div className={styles.main}>
+		<main className={styles.main}>
+	
 			<Home />
 			<Projects />
-		</div>
+			<About />
+			<Footer />
+		</main>
 	);
 }
 

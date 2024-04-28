@@ -69,6 +69,8 @@ button {
 	display: grid;
 	grid-template-columns: 2.5fr 7.5fr;
 	gap: 2rem;
+	position: relative;
+	z-index: 100;
 }
 
 .subheading {
@@ -79,6 +81,7 @@ button {
 	border: 1px solid #303033;
 	border-radius: 1rem;
 	padding: 1rem 1.5rem;
+	background-color: var(--color-base);
 }
 
 .heading-secondary {
@@ -86,4 +89,20 @@ button {
 	background-clip: text;
 	color: transparent;
 	font-size: clamp(1.8rem, 3.4vw, 4rem);
+	letter-spacing: 1px;
+	width: 50%;
+}
+
+.heading-tertiary {
+	font-size: clamp(1.6rem, 3.2vw, 3rem);
+	color: var(--color-light);
+	letter-spacing: 1px;
+}
+
+.text-primary {
+	font-size: 1.8rem;
+	color: var(--color-light);
+	opacity: 0.8;
+	letter-spacing: 0.8px;
+	line-height: 1.6;
 }

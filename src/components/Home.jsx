@@ -5,7 +5,8 @@ import styles from './Home.module.scss';
 function Home() {
 	const textToRotate = 'scroll for more . scroll for more .';
 	return (
-		<div className={styles.home}>
+		<section className={styles.home}>
+			<header className={styles.home__header}>&nbsp;</header>
 			<div className={styles.textbox}>
 				<span className="subheading">✋🏻 Hello there</span>
 				<h1>I'm Mohit Jadhav A Frontend Web Developer.</h1>
@@ -27,7 +28,7 @@ function Home() {
 					</p>
 				</div>
 			</div>
-		</div>
+		</section>
 	);
 }
 
