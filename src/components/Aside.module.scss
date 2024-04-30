@@ -1,12 +1,58 @@
 @use '../mixins/utility.scss' as util;
+@use '../mixins/media.scss' as media;
 
 .aside {
 	border: 1px solid var(--color-light-gray);
 	border-radius: var(--radius-lg);
-	@include util.flexbox(column, center, flex-start, 2rem);
+	@include util.flexbox(column, center, flex-start, 3rem);
 
 	padding: 2rem;
 	background-color: var(--color-base);
+	position: relative;
+
+	@include media.md {
+		@include util.flexbox(row, flex-start, space-around, 0);
+		&::after {
+			content: '';
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			height: 100%;
+			width: 1px;
+			background-color: var(--color-light-gray);
+		}
+	}
+
+	@include media.sm {
+		@include util.flexbox(column, center, center, 3rem);
+		&::after {
+			content: none;
+		}
+	}
+
+	&__header,
+	&__main {
+		@include util.flexbox(column, center, flex-start, 2rem);
+	}
+
+	&__main {
+		@include media.md {
+			height: 100%;
+			@include util.flexbox(column, flex-start, space-between, 0);
+		}
+
+		@include media.sm {
+			// height: 100%;
+			@include util.flexbox(column, center, flex-start, 2rem);
+		}
+	}
+
+	&__main {
+		& > *:last-child {
+			margin-top: 2rem;
+		}
+	}
 
 	&__profile {
 		height: 20rem;
@@ -17,6 +63,14 @@
 		filter: contrast(70%) grayscale(50%);
 		position: relative;
 		overflow: hidden;
+
+		@include media.md {
+			width: 25rem;
+		}
+
+		@include media.sm {
+			width: 100%;
+		}
 	}
 
 	&__profession {
@@ -25,7 +79,7 @@
 	}
 
 	&__location {
-		font-size: 1.2rem;
+		font-size: 1.4rem;
 		color: var(--color-light);
 		letter-spacing: 1px;
 		opacity: 0.8;
@@ -52,9 +106,5 @@
 			background-color: var(--color-accent);
 			color: var(--color-base);
 		}
-	}
-
-	& > *:last-child {
-		margin-top: auto;
 	}
 }

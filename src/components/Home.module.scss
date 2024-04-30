@@ -1,9 +1,15 @@
 @use '../mixins/utility.scss' as util;
+@use '../mixins/media.scss' as media;
 
 .home {
 	height: 100%;
 	position: relative;
 	@include util.flexbox(column, flex-start, space-between, 0);
+
+	@include media.md {
+		height: auto;
+		@include util.flexbox(column, flex-start, flex-start, 0);
+	}
 
 	&__header {
 		font-family: var(--font-default);
@@ -14,6 +20,10 @@
 		background-clip: text;
 		color: transparent;
 		letter-spacing: 0.5rem;
+
+		@include media.md {
+			display: none;
+		}
 	}
 }
 
@@ -62,6 +72,23 @@
 		position: absolute;
 		left: 50%;
 		transform-origin: 0 6rem;
+	}
+
+	@include media.sm {
+		height: 6rem;
+		width: 6rem;
+
+		&__icon {
+			font-size: 1.4rem;
+		}
+
+		&__text {
+			font-size: 0.5rem;
+		}
+
+		&__char {
+			transform-origin: 0 3rem;
+		}
 	}
 }
 

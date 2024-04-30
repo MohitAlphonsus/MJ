@@ -1,13 +1,11 @@
+@use './mixins/media.scss' as media;
+
 :root {
 	--color-light: #faf6ef;
 	--color-base: #111;
-
-	// --color-accent: #d5c3a5;
-	// --color-secondary: #a6ad8f;
 	--color-accent: #fff2d7;
 	--color-secondary: #ffe0b5;
 	--color-tertiary: #f8c794;
-
 	--color-light-gray: #303033;
 
 	--radius-sm: 1rem;
@@ -37,6 +35,7 @@
 html {
 	font-size: 62.5%;
 	scrollbar-width: none;
+	overflow-x: hidden;
 }
 
 html,
@@ -75,15 +74,27 @@ button {
 	height: 100dvh;
 	background-color: var(--color-base);
 	padding: 4rem 4%;
+	position: relative;
+	overflow-x: hidden;
+
+	@include media.md {
+		height: 100%;
+	}
 }
 
 .container {
+	max-width: 140rem;
+	margin: 0 auto;
 	height: 100%;
 	display: grid;
 	grid-template-columns: 2.5fr 7.5fr;
 	gap: 2rem;
 	position: relative;
 	z-index: 100;
+
+	@include media.md {
+		grid-template-columns: 1fr;
+	}
 }
 
 .subheading {

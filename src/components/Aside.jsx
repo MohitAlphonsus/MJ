@@ -9,32 +9,36 @@ const CV_PDF_LINK =
 function Aside() {
 	return (
 		<aside className={styles.aside}>
-			<Logo />
-			<div
-				className={styles.aside__profile}
-				style={{ backgroundImage: `url(${profile})` }}
-			>
-				&nbsp;
-			</div>
-			<span className={styles.aside__profession}>Frontend Developer</span>
-			<span className={styles.aside__location}>
-				Shrirampur, Ahmednagar, India
-			</span>
-			<div className={styles.aside__icons}>
-				{socialIcons.map(({ id, icon: Icon, linkTo }) => (
-					<a
-						href={linkTo}
-						target="_blank"
-						key={id}
-						className={styles.aside__icon}
-					>
-						<Icon />
-					</a>
-				))}
-			</div>
-			<Button type="PRIMARY" href={CV_PDF_LINK} target="_blank">
-				Download CV
-			</Button>
+			<header className={styles.aside__header}>
+				<Logo />
+				<div
+					className={styles.aside__profile}
+					style={{ backgroundImage: `url(${profile})` }}
+				>
+					&nbsp;
+				</div>
+			</header>
+			<main className={styles.aside__main}>
+				<span className={styles.aside__profession}>Frontend Developer</span>
+				<span className={styles.aside__location}>
+					Shrirampur, Ahmednagar, India
+				</span>
+				<div className={styles.aside__icons}>
+					{socialIcons.map(({ id, icon: Icon, linkTo }) => (
+						<a
+							href={linkTo}
+							target="_blank"
+							key={id}
+							className={styles.aside__icon}
+						>
+							<Icon />
+						</a>
+					))}
+				</div>
+				<Button type="PRIMARY" href={CV_PDF_LINK} target="_blank">
+					Download CV
+				</Button>
+			</main>
 		</aside>
 	);
 }
