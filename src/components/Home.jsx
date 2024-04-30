@@ -6,7 +6,7 @@ function Home() {
 	const textToRotate = 'scroll for more . scroll for more .';
 	return (
 		<section className={styles.home}>
-			<header className={styles.home__header}>&nbsp;</header>
+			<header className={styles.home__header}>MJ</header>
 			<div className={styles.textbox}>
 				<span className="subheading">✋🏻 Hello there</span>
 				<h1>I'm Mohit Jadhav A Frontend Web Developer.</h1>

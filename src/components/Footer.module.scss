@@ -1,7 +1,7 @@
 @use '../mixins/utility.scss' as util;
 
 .footer {
-	border-top: 1px solid #303033;
+	border-top: 1px solid var(--color-light-gray);
 	padding-top: 10rem;
 	color: var(--color-light);
 

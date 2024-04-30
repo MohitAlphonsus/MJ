@@ -7,7 +7,9 @@
 
 	--color-light-gray: #303033;
 
-	--radius: 3rem;
+	--radius-sm: 1rem;
+	--radius-md: 2.5rem;
+	--radius-lg: 3rem;
 
 	--font-default: 'Roboto', sans-serif;
 	--font-display: 'Bitter', serif;
@@ -84,7 +86,7 @@ button {
 	letter-spacing: 1px;
 	color: var(--color-light);
 	border: 1px solid var(--color-light-gray);
-	border-radius: 1rem;
+	border-radius: var(--radius-sm);
 	padding: 1rem 1.5rem;
 	background-color: var(--color-base);
 }

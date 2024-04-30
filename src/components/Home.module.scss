@@ -6,32 +6,15 @@
 	@include util.flexbox(column, flex-start, space-between, 0);
 
 	&__header {
-		height: 2px;
-		width: 100%;
+		font-family: var(--font-display);
+		font-size: 6rem;
+		font-weight: 700;
+		text-align: center;
 		background: var(--gradient);
-		position: relative;
-
-		&::before {
-			content: '';
-			position: absolute;
-			inset: 0;
-			background-color: var(--color-accent);
-			z-index: -1;
-			filter: blur(0.2rem);
-		}
-
-		&::after {
-			content: 'MJ';
-			position: absolute;
-			top: 50%;
-			left: 50%;
-			transform: translate(-50%, -50%);
-			font-size: 4rem;
-			background: var(--gradient);
-			background-clip: text;
-			color: transparent;
-			filter: drop-shadow(0 0 0.5rem var(--color-accent));
-		}
+		background-clip: text;
+		color: transparent;
+		letter-spacing: 0.5rem;
+		text-shadow: 0 0 0.5rem var(--color-accent);
 	}
 }
 

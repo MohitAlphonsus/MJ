@@ -14,6 +14,9 @@ function Aside() {
 				&nbsp;
 			</div>
 			<span className={styles.aside__profession}>Frontend Developer</span>
+			<span className={styles.aside__location}>
+				Shrirampur, Ahmednagar, India
+			</span>
 			<div className={styles.aside__icons}>
 				{socialIcons.map(({ id, icon: Icon }) => (
 					<span key={id} className={styles.aside__icon}>
