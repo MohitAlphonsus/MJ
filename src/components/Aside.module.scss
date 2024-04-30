@@ -1,18 +1,18 @@
+@use '../mixins/utility.scss' as util;
+
 .aside {
-	border: 1px solid #303033;
-	border-radius: 3rem;
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	gap: 2rem;
+	border: 1px solid var(--color-light-gray);
+	border-radius: var(--radius);
+	@include util.flexbox(column, center, flex-start, 2rem);
+
 	padding: 2rem;
 	background-color: var(--color-base);
 
 	&__profile {
 		height: 20rem;
 		width: 100%;
-		border: 1px solid #303033;
-		border-radius: 2.5rem;
+		border: 1px solid var(--color-light-gray);
+		border-radius: var(--radius);
 		background-size: cover;
 		filter: contrast(70%) grayscale(50%);
 	}
@@ -23,8 +23,7 @@
 	}
 
 	&__icons {
-		display: flex;
-		gap: 1rem;
+		@include util.flexbox(row, flex-start, flex-start, 1rem);
 	}
 
 	&__icon {

@@ -1,14 +1,11 @@
+@use '../mixins/utility.scss' as util;
+
 .about {
-	display: flex;
-	flex-direction: column;
-	align-items: flex-start;
-	gap: 2rem;
 	padding-bottom: 10rem;
+	@include util.flexbox(column, flex-start, flex-start, 2rem);
 
 	&__education {
-		display: flex;
-		flex-direction: column;
-		gap: 2rem;
+		@include util.flexbox(column, flex-start, flex-start, 2rem);
 	}
 
 	h3 {
@@ -18,10 +15,7 @@
 }
 
 .row {
-	display: flex;
-	flex-direction: column;
-	align-items: flex-start;
-	gap: 0.5rem;
+	@include util.flexbox(column, flex-start, flex-start, 0.5rem);
 	color: var(--color-light);
 	padding-bottom: 2rem;
 
@@ -47,8 +41,7 @@
 }
 
 .tools {
-	display: flex;
-	gap: 2rem;
+	@include util.flexbox(row, flex-start, flex-start, 2rem);
 	flex-wrap: wrap;
 
 	&__tool {
@@ -56,9 +49,8 @@
 		background-color: var(--color-base);
 		border-radius: 1rem;
 		padding: 2rem;
-		display: flex;
-		align-items: center;
-		gap: 1rem;
+
+		@include util.flexbox(row, center, flex-start, 1rem);
 		color: var(--color-light);
 		font-size: 1.8rem;
 	}
@@ -69,8 +61,7 @@
 }
 
 .skills {
-	display: flex;
-	gap: 2rem;
+	@include util.flexbox(row, flex-start, flex-start, 2rem);
 
 	span {
 		color: var(--color-light);
