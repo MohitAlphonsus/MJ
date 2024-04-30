@@ -1,11 +1,10 @@
 import styles from './Projects.module.scss';
-import project1 from '../assets/project-1.png';
 import { Button } from '../components';
 import { projects } from '../constants/projects';
 
 function Projects() {
 	return (
-		<section className={styles.projects}>
+		<section className={styles.projects} id="projects">
 			<span className="subheading">⭐ My Projects</span>
 			<h2 className="heading-secondary ">Check out my works</h2>
 			<div className={styles.projects__container}>

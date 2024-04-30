@@ -24,7 +24,7 @@ export const projects = [
 			{ id: 't2', toolName: 'CSS-Modules' },
 			{ id: 't3', toolName: 'React-Icons' },
 			{ id: 't4', toolName: 'React-Router-Dom' },
-			{ id: 't4', toolName: 'Browser-Storage' },
+			{ id: 't5', toolName: 'Browser-Storage' },
 		],
 	},
 ];

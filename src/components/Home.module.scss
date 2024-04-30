@@ -6,7 +6,7 @@
 	@include util.flexbox(column, flex-start, space-between, 0);
 
 	&__header {
-		font-family: var(--font-display);
+		font-family: var(--font-default);
 		font-size: 6rem;
 		font-weight: 700;
 		text-align: center;
@@ -14,7 +14,6 @@
 		background-clip: text;
 		color: transparent;
 		letter-spacing: 0.5rem;
-		text-shadow: 0 0 0.5rem var(--color-accent);
 	}
 }
 

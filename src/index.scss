@@ -1,9 +1,12 @@
 :root {
-	--color-light: #f7f7f7;
+	--color-light: #faf6ef;
 	--color-base: #111;
 
-	--color-accent: #d5c3a5;
-	--color-secondary: #a6ad8f;
+	// --color-accent: #d5c3a5;
+	// --color-secondary: #a6ad8f;
+	--color-accent: #fff2d7;
+	--color-secondary: #ffe0b5;
+	--color-tertiary: #f8c794;
 
 	--color-light-gray: #303033;
 
@@ -11,13 +14,14 @@
 	--radius-md: 2.5rem;
 	--radius-lg: 3rem;
 
-	--font-default: 'Roboto', sans-serif;
-	--font-display: 'Bitter', serif;
+	--font-default: 'Bitter', serif;
+	--font-display: 'Syne', sans-serif;
 
 	--gradient: linear-gradient(
 		to right,
 		var(--color-accent),
-		var(--color-secondary)
+		var(--color-secondary),
+		var(--color-tertiary)
 	);
 }
 
@@ -27,6 +31,7 @@
 	padding: 0;
 	margin: 0;
 	box-sizing: border-box;
+	scroll-behavior: smooth;
 }
 
 html {
@@ -42,6 +47,7 @@ body {
 body {
 	font-family: var(--font-default);
 	font-weight: 400;
+	letter-spacing: 1px;
 }
 
 h1,
@@ -111,5 +117,5 @@ button {
 	color: var(--color-light);
 	opacity: 0.8;
 	letter-spacing: 0.8px;
-	line-height: 1.6;
+	line-height: 1.8;
 }

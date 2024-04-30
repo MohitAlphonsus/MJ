@@ -5,7 +5,7 @@
 	@include util.flexbox(column, flex-start, flex-start, 2rem);
 
 	&__education {
-		@include util.flexbox(column, flex-start, flex-start, 2rem);
+		@include util.flexbox(column, flex-start, flex-start, 3rem);
 	}
 
 	h3 {
@@ -15,7 +15,7 @@
 }
 
 .row {
-	@include util.flexbox(column, flex-start, flex-start, 0.5rem);
+	@include util.flexbox(column, flex-start, flex-start, 1.6rem);
 	color: var(--color-light);
 	padding-bottom: 2rem;
 
@@ -62,6 +62,7 @@
 
 .skills {
 	@include util.flexbox(row, flex-start, flex-start, 2rem);
+	flex-wrap: wrap;
 
 	span {
 		font-size: 1.2rem;

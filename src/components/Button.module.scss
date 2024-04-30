@@ -7,6 +7,7 @@
 	text-transform: uppercase;
 	border-radius: var(--radius-lg);
 	cursor: pointer;
+	transition: all 0.3s ease-in-out;
 
 	&__small {
 		padding: 1rem 2rem;
@@ -15,11 +16,21 @@
 	&__primary {
 		background: var(--gradient);
 		color: var(--color-base);
+		background-size: 300% 300%;
+
+		&:hover {
+			background-position: 100% 0;
+		}
 	}
 
 	&__secondary {
 		background-color: var(--color-base);
 		color: var(--color-light);
 		border: 1px solid var(--color-light-gray);
+
+		&:hover {
+			background: var(--gradient);
+			color: var(--color-base);
+		}
 	}
 }

@@ -10,7 +10,7 @@ function Home() {
 			<div className={styles.textbox}>
 				<span className="subheading">✋🏻 Hello there</span>
 				<h1>I'm Mohit Jadhav A Frontend Web Developer.</h1>
-				<Button>My Works</Button>
+				<Button href="#projects">My Works</Button>
 			</div>
 			<div className={styles.circle}>
 				<FaArrowDown className={styles.circle__icon} />

@@ -3,6 +3,9 @@ import { socialIcons } from '../constants/icons';
 import profile from '../assets/profile.avif';
 import styles from './Aside.module.scss';
 
+const CV_PDF_LINK =
+	'https://drive.google.com/file/d/15NfjJnKJkdVR-R_5_pzc-R5svjzkcJJo/view?usp=drive_link';
+
 function Aside() {
 	return (
 		<aside className={styles.aside}>
@@ -18,13 +21,20 @@ function Aside() {
 				Shrirampur, Ahmednagar, India
 			</span>
 			<div className={styles.aside__icons}>
-				{socialIcons.map(({ id, icon: Icon }) => (
-					<span key={id} className={styles.aside__icon}>
+				{socialIcons.map(({ id, icon: Icon, linkTo }) => (
+					<a
+						href={linkTo}
+						target="_blank"
+						key={id}
+						className={styles.aside__icon}
+					>
 						<Icon />
-					</span>
+					</a>
 				))}
 			</div>
-			<Button type="PRIMARY">Download CV</Button>
+			<Button type="PRIMARY" href={CV_PDF_LINK} target="_blank">
+				Download CV
+			</Button>
 		</aside>
 	);
 }
